@@ -7,21 +7,24 @@ import { Store } from './pages/Store';
 import { About } from './pages/About';
 
 //Componentes
-import  {Navbar} from './components/Navbar';
+import { Navbar } from './components/Navbar';
+import { ShoppingCartProvider } from './context/shoppingCartContext';
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Container className='mb-4'>
-        <Routes>
-          <Route>
-            <Route path="/" element={<Home />} />
-            <Route path="/store" element={<Store />} />
-            <Route path="/about" element={<About />} />
-          </Route>
-        </Routes>
-      </Container>
+      <ShoppingCartProvider>
+        <Navbar />
+        <Container className='mb-4'>
+          <Routes>
+            <Route>
+              <Route path="/" element={<Home />} />
+              <Route path="/store" element={<Store />} />
+              <Route path="/about" element={<About />} />
+            </Route>
+          </Routes>
+        </Container>
+      </ShoppingCartProvider>
     </>
   )
 }
