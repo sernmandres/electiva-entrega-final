@@ -38,7 +38,6 @@ export function CartItem({ id, quantity }: cartItemProps) {
                     {formatCurrency(item.price)}
                 </div>
             </div>
-
             <div>
                 <div className="d-flex align-items-center flex-column" style={{ gap: ".5rem" }}>
                     <div className="d-flex align-items-center justify-content-center" style={{ gap: ".5rem" }}>
@@ -69,7 +68,7 @@ export function CartItem({ id, quantity }: cartItemProps) {
                 </div>
             </div>
 
-            <div style={{ padding: "0 1em", width: "20%" }}> {formatCurrency(item.price * quantity)}</div>
+            <div style={{ padding: "0 1em", width: "30%" }}> {formatCurrency(item.price * quantity)}</div>
             <Button variant="outline-danger" size='sm' onClick={() => removeFromCart(item.id)}
                 style={{
                     borderColor: "#6976BF",

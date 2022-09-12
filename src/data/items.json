@@ -1,26 +1,30 @@
 [
     {
       "id": 1,
-      "name": "Book",
-      "price": 10.99,
-      "imgUrl": "/images/book.jpg"
+      "name": "Nike",
+      "reference": "A84ZS - B1Z3",
+      "price": 722364,
+      "imgUrl": "/images/producto1.jpeg"
     },
     {
       "id": 2,
-      "name": "Computer",
-      "price": 1199,
-      "imgUrl": "/images/computer.jpg"
+      "name": "Adidas",
+      "reference": "A90ZS - B2Z4",
+      "price": 1314567,
+      "imgUrl": "/images/producto2.jpeg"
     },
     {
       "id": 3,
-      "name": "Banana",
-      "price": 1.05,
-      "imgUrl": "/images/banana.jpg"
+      "name": "Puma",
+      "reference": "A66ZS - B5Z7",
+      "price":4128510,
+      "imgUrl": "/images/producto3.jpeg"
     },
     {
       "id": 4,
-      "name": "Car",
-      "price": 14000,
-      "imgUrl": "/images/car.jpg"
+      "name": "Nike",
+      "reference": "A60ZS - B6Z8",
+      "price": 3780440,
+      "imgUrl": "/images/producto4.jpeg"
     }
   ]

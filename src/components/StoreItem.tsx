@@ -6,11 +6,12 @@ type StoreItemProps = {
     id: number,
     name: string,
     price: number,
-    imgUrl: string
+    imgUrl: string,
+    reference: String;
 
 }
 
-export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
+export function StoreItem({ id, name, price, imgUrl, reference }: StoreItemProps) {
 
     const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart } = useShoppingCart();
     const quantity = getItemQuantity(id);
@@ -22,6 +23,16 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
                 <span className="fs-3" style={{ width: "50%", letterSpacing: "1px", color: "#505050" }}>{name}</span>
                 <span className="fs-5 ms-2 text-muted" style={{ width: "50%", textAlign: "right" }}>{formatCurrency(price)}</span>
             </Card.Title>
+            <div style={{
+                    textAlign: "center",
+                    paddingBottom: "1em",
+                    letterSpacing: "2px",
+                    color: "#b7b7b7",
+                    borderTop: "1px solid #f1f1f1",
+                    paddingTop: "1em"
+            }}>
+                {reference}
+            </div>
             <div className="mt-auto">
                 {quantity === 0 ? (
                     <Button className="w-100" onClick={() => increaseCartQuantity(id)}
