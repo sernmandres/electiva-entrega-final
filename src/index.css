@@ -1,0 +1,276 @@
+#logoNavBar {
+  color: #6976BF;
+  letter-spacing: 1px;
+}
+
+#home {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.btn-registerNavBar,
+.btn-cartShopNavBar,
+.bt-loginNavBar {
+  padding: 1em 1.5em;
+  border-radius: 5px;
+  text-decoration: none;
+  position: relative;
+}
+
+.btn-registerNavBar {
+  background-color: #6976BF;
+  color: #ffffff
+}
+
+.btn-cartShopNavBar,
+.bt-loginNavBar {
+  color: #6976BF;
+}
+
+.nav-link.active {
+  color: #6976BF !important;
+}
+
+.btn-cartShopNavBar::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 50px;
+  background-color: #7180D9;
+  top: 0;
+  left: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: 700;
+}
+
+p,
+span,
+a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.textoBannerHome {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  left: 15%;
+  right: 0;
+}
+
+.textoBannerHome h1 {
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: 300;
+  font-size: 4em;
+  color: #7180D9;
+}
+
+.textoBannerHome p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  width: 50%;
+  color: #7180D9;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.btnBanner {
+  background-color: #6976BF;
+  display: flex;
+  padding: 0.8em 1.5em;
+  border-radius: 25px;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-top: 2em;
+  border: none;
+}
+
+.wrap {
+  font-family: 'Yantramanav', sans-serif;
+  font-weight: 700;
+}
+
+.sepIcon {
+  margin-left: 10px;
+}
+
+.homeBanner {
+  background-image: url("../public/images/home/prueba.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1080px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-name: bg-zoomIn;
+}
+
+.wrap {
+  border-right: 2px solid #7180D9;
+}
+
+.container-icons {
+  position: relative;
+}
+
+.container-icons>div {
+  background-color: #ffffff;
+  position: absolute;
+  display: flex;
+  left: 15%;
+  justify-content: center;
+  width: 70%;
+  top: -120px;
+  border: 1px solid #7180D9
+}
+
+.icons-info {
+  background-color: #ffffff;
+  text-align: center;
+  margin: auto;
+  padding: 2.5em;
+  border-right: 2px solid #7180D9;
+}
+
+.icons-info:nth-last-child(1) {
+  border-right: 0;
+}
+
+.icons-info svg {
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+.icons-info,
+.icons-info p,
+.icons-info h3,
+.icons-info svg {
+  transition: 0.3s cubic-bezier(0.39, 0.58, 0.57, 1) all;
+}
+
+.icons-info h3 {
+  font-size: 1.4em;
+}
+
+.icons-info:hover p,
+.icons-info:hover h3,
+.icons-info:hover svg {
+  color: #ffffff;
+}
+
+.icons-info:hover {
+  background-color: #7180D9;
+}
+
+.sepTop {
+  /**margin-top: 18em;**/
+  margin-top: 0 !important;
+  background-color: #F2F2F2;
+  padding-top: 18em;
+}
+
+.section-title {
+  color: #7180D9;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.section-title span {
+  font-size: 0.4em;
+  display: block;
+  margin-bottom: 0.5em;
+  color: #05AFF2;
+  font-weight: 500;
+}
+
+.container-solution {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 4em;
+}
+
+.container-solution>div {
+  width: 33%;
+  background-color: #ffffff;
+  margin-left: 2%;
+  padding: 4em 2em;
+}
+
+.container-solution>div:nth-child(1) {
+  margin-left: 0;
+}
+
+.container-solution h3 {
+  margin-top: 1em;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.p-top-4 {
+  margin-top: 4em;
+}
+
+.car-tamano {
+  width: 600px !important;
+  background-color: #ffffff !important;
+}
+
+.btn-HoverCarrito:hover,
+.btn-HoverCarrito:active,
+.btn-HoverCarrito:focus{
+  background-color: #6976BF !important;
+}
+
+.btn-HoverCarrito:hover svg,
+.btn-HoverCarrito:active svg,
+.btn-HoverCarrito:focus svg{
+  color: #ffffff;
+}
+
+.btn-HoverCarrito:hover .cont-HoverCarrito {
+  background-color: #ffffff !important;
+  color: #6976BF !important;
+  border: 1px solid #6976BF;
+}
+/***
+  
+  /**
+  *
+  *
+  * || ALL animation ||
+  *
+  **/
+
+
+@keyframes bg-zoomIn {
+  0% {
+    transform: scale(2, 2);
+  }
+
+  50% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    transform: scale(2, 2);
+  }
+}

@@ -15,7 +15,7 @@ function App() {
     <>
       <ShoppingCartProvider>
         <Navbar />
-        <Container className='mb-4'>
+        <div className='mb-4'>
           <Routes>
             <Route>
               <Route path="/" element={<Home />} />
@@ -23,7 +23,7 @@ function App() {
               <Route path="/about" element={<About />} />
             </Route>
           </Routes>
-        </Container>
+        </div>
       </ShoppingCartProvider>
     </>
   )
