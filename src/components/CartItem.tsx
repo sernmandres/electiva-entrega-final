@@ -1,4 +1,4 @@
-import { Button, FormGroup, Stack } from 'react-bootstrap';
+import { Button, Stack } from 'react-bootstrap';
 import { useShoppingCart } from '../context/shoppingCartContext';
 import StoreItem from '../data/items.json';
 import { formatCurrency } from '../utilities/formatCurrency';
@@ -12,7 +12,6 @@ export function CartItem({ id, quantity }: cartItemProps) {
 
     const { removeFromCart, increaseCartQuantity, decreaseCartQuantity } = useShoppingCart();
     const item = StoreItem.find(item => item.id === id)
-    console.log("item ", item)
     if (item == null) return null
 
     return (
@@ -38,6 +37,7 @@ export function CartItem({ id, quantity }: cartItemProps) {
                     {formatCurrency(item.price)}
                 </div>
             </div>
+
             <div>
                 <div className="d-flex align-items-center flex-column" style={{ gap: ".5rem" }}>
                     <div className="d-flex align-items-center justify-content-center" style={{ gap: ".5rem" }}>

@@ -38,7 +38,6 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
         0
     )
 
-
     const openCart = () => setIsOpen(true)    
     const closeCart = () => setIsOpen(false)    
 
@@ -49,13 +48,14 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
 
     function increaseCartQuantity(id: number) {
         setCartItems(currentItem => {
+
             if (currentItem.find(item => item.id === id) == null) {
                 return [...currentItem, { id, quantity: 1 }]
             } else {
                 return currentItem.map(item => {
                     if (item.id === id) {
                         return { ...item, quantity: item.quantity + 1 }
-                    } else {
+                    } else {    
                         return item
                     }
                 })
@@ -84,8 +84,6 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
             return currentItem.filter(item => item.id !== id)
         })
     }
-
-
 
     return (
         <ShoppingCartContext.Provider
