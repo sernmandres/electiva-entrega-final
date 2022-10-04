@@ -8,7 +8,6 @@ type StoreItemProps = {
     price: number,
     imgUrl: string,
     reference: String;
-
 }
 
 export function StoreItem({ id, name, price, imgUrl, reference }: StoreItemProps) {

@@ -5,6 +5,7 @@ import { Container } from 'react-bootstrap';
 import { Home } from './pages/Home';
 import { Store } from './pages/Store';
 import { About } from './pages/About';
+import Register from './components/Register';
 
 //Componentes
 import { Navbar } from './components/Navbar';
@@ -21,6 +22,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/store" element={<Store />} />
               <Route path="/about" element={<About />} />
+              <Route path="/registrarse" element={<Register />} />
             </Route>
           </Routes>
         </div>

@@ -31,7 +31,7 @@ export function Navbar() {
                         <NavLink to="/login" className="bt-loginNavBar">
                             Iniciar sesión
                         </NavLink>
-                        <NavLink to="/registro" className="btn-registerNavBar ms-2">
+                        <NavLink to="/registrarse" className="btn-registerNavBar ms-2">
                             Registrarse
                         </NavLink>
                         <Button style={{ width: "3rem", height:"3rem", position:"relative",marginLeft:"2em", color:"#6976BF", borderColor:"#6976BF"}} 
