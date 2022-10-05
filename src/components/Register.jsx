@@ -1,5 +1,6 @@
 import React from 'react';
 import withNavigateHook from './withNavigateHook';
+import axios from 'axios';
 
 class Register extends React.Component {
   constructor(props) {
@@ -31,73 +32,98 @@ class Register extends React.Component {
 
   submitForm() {
     console.log("data enviado")
-    fetch('https://sinocuser.herokuapp.com/usuario/register/', {
-      'mode': 'cors',
-      method: 'POST',
-      body: JSON.stringify(this.state),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    })
-      .then(response => response.json())
-      .then((data) => console.log(data));
 
-    this.setState({
-      username: '',
-      name: '',
-      last_name: '',
-      email: '',
-      password: ''
-    });
+    console.log("this.state.name ", this.state.name)
 
-    this.handleToContact();
 
+    // POST - API/usuarios
+    // URL:: https://sinocuser.herokuapp.com/usuario/register/
+    axios
+      .post('https://sinocuser.herokuapp.com/usuario/register/',
+        JSON.stringify(this.state),
+        {
+          headers: { 'Content-Type': 'application/json' }
+        })
+      .then(response => {
+        console.log('Well done!');
+        console.log('User profile', response);
+        this.handleToContact();
+      })
+      .catch(error => {
+        console.log('An error occurred:', error.response);
+      });
   }
 
   render() {
     return (
-      <div>
-        <label >Nombre de usuario:</label>
-        <input value={this.state.username}
-          name="username"
-          onChange={this.changeHandler}
-          type="text"
-          className="form-control"
-        />
+      <div className='ca_forms'>
+        <div>
+          <div className='circleAnimation1'></div>
+          <div className='circleAnimation2'></div>
+          <div className='circleAnimation3'></div>
+          <div className='circleAnimation4'></div>
+          <div className='circleAnimation5'></div>
+          <div className='ca_msj-form'>
+            <h3>Bienvenido!</h3>
 
-        <label>Nombre:</label>
-        <input value={this.state.name}
-          name="name"
-          onChange={this.changeHandler}
-          type="text"
-          className="form-control"
-        />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a ante egestas, tincidunt ante sed,
+              commodo risus. Suspendisse molestie enim vel ligula scelerisque,
+            </p>
+          </div>
+        </div>
 
-        <label>Apellidos:</label>
-        <input value={this.state.last_name}
-          name="last_name"
-          onChange={this.changeHandler}
-          type="text"
-          className="form-control"
-        />
+        <div className='ca_contFormulario'>
+          <div>
+            <div>
+              <h3>Crear cuenta</h3>
+            </div>
 
-        <label>Correo electrónico:</label>
-        <input value={this.state.email}
-          name="email"
-          onChange={this.changeHandler}
-          type="text"
-          className="form-control"
-        />
+            <div className='ca_formularioEnvio'>
+              <input value={this.state.username}
+                name="username"
+                onChange={this.changeHandler}
+                type="text"
+                className="form-control"
+                placeholder= "Nick"
+              />
 
-        <label>Contraseña:</label>
-        <input value={this.state.password}
-          name="password"
-          onChange={this.changeHandler}
-          type="text"
-          className="form-control"
-        />
+              <input value={this.state.name}
+                name="name"
+                onChange={this.changeHandler}
+                type="text"
+                className="form-control"
+                placeholder='Nombre'
+              />
 
-        <input type="submit" onClick={this.submitForm} className="btn btn-dark" value="enviar data" />
+              <input value={this.state.last_name}
+                name="last_name"
+                onChange={this.changeHandler}
+                type="text"
+                className="form-control"
+                placeholder='Apellidos'
+              />
+
+              <input value={this.state.email}
+                name="email"
+                onChange={this.changeHandler}
+                type="text"
+                className="form-control"
+                placeholder='Correo electrónico'
+              />
+
+              <input value={this.state.password}
+                name="password"
+                onChange={this.changeHandler}
+                type="text"
+                className="form-control"
+                placeholder='Contraseña'
+              />
+
+              <input type="submit" onClick={this.submitForm} value="Registrarse" />
+            </div>
+          </div>
+        </div>
       </div>
     )
   }

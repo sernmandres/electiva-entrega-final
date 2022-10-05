@@ -17,7 +17,7 @@ function App() {
     <>
       <ShoppingCartProvider>
         <Navbar />
-        <div className='mb-4'>
+        <div>
           <Routes>
             <Route>
               <Route path="/" element={<Home />} />
