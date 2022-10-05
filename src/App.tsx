@@ -6,6 +6,7 @@ import { Home } from './pages/Home';
 import { Store } from './pages/Store';
 import { About } from './pages/About';
 import Register from './components/Register';
+import Login from './components/Login';
 
 //Componentes
 import { Navbar } from './components/Navbar';
@@ -23,6 +24,7 @@ function App() {
               <Route path="/store" element={<Store />} />
               <Route path="/about" element={<About />} />
               <Route path="/registrarse" element={<Register />} />
+              <Route path="/iniciar-sesion" element={<Login />} />
             </Route>
           </Routes>
         </div>
