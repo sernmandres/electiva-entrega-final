@@ -15,27 +15,23 @@ class Register extends React.Component {
 
     this.changeHandler = this.changeHandler.bind(this);
     this.submitForm = this.submitForm.bind(this);
-    this.handleToContact = this.handleToContact.bind(this);
+    this.redirection = this.redirection.bind(this);
   }
 
   changeHandler(event) {
+    console.log(event)
     this.setState({
       [event.target.name]: event.target.value
     })
     console.log(this.state)
   }
 
-  handleToContact() {
+  redirection() {
     console.log("Login");
     this.props.navigation('/iniciar-sesion');
   }
 
   submitForm() {
-    console.log("data enviado")
-
-    console.log("this.state.name ", this.state.name)
-
-
     // POST - API/usuarios
     // URL:: https://sinocuser.herokuapp.com/usuario/register/
     axios
