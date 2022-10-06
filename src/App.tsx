@@ -11,6 +11,7 @@ import Login from './components/Login';
 //Componentes
 import { Navbar } from './components/Navbar';
 import { ShoppingCartProvider } from './context/shoppingCartContext';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (

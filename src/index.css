@@ -356,6 +356,10 @@ a {
   overflow: hidden;
 }
 
+.ca_forms span{
+  font-weight: 700;
+}
+
 .ca_forms > div:nth-child(1) {
   display: flex;
   background-color: #6976BF;
@@ -433,6 +437,11 @@ a {
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 500;
+}
+
+.Toastify__toast--warning,
+.Toastify__toast--success{
+  background-color: #2f2f2f;
 }
 
 /***
