@@ -4,10 +4,6 @@ import axios from 'axios';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
-const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
-const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
-
 class Register extends React.Component {
   constructor(props) {
     super(props);
@@ -76,7 +72,7 @@ class Register extends React.Component {
       }
 
       if (this.state.password === "") {
-        toast.success("¡Ya casi, ingresa tu contraseña", {
+        toast.warn("¡Ya casi, ingresa tu contraseña", {
           position: toast.POSITION.TOP_RIGHT
         });
       }
